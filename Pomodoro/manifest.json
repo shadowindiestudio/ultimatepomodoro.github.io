@@ -1,0 +1,8 @@
+{
+  "name": "Pomodoro Timer",
+  "description": "Your hype-bestie study timer. Keeps you on track and cheers you up!",
+  "entry": "index.html",
+  "icon": "icon.png", 
+  "version": "1.0.0",
+  "author": "@piroshub"
+}

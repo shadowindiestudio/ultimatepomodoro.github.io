@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ultimate Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Branding inside container */
+    #branding {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      user-select: none;
+      cursor: default;
+    }
+
+    #logo {
+      width: 50px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .username {
+      font-weight: bold;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #f04c75;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Ultimate Pomodoro Timer</h1>
+    
+    <div class="mode-buttons">
+      <button id="pomodoro">Pomodoro</button>
+      <button id="shortBreak">Short Break</button>
+      <button id="longBreak">Long Break</button>
+    </div>
+
+    <div class="analog-timer">
+      <canvas id="analog" width="200" height="200"></canvas>
+    </div>
+
+    <p id="mode-label">Pomodoro — 25 min</p>
+
+    <div class="timer-controls">
+      <button id="start">▶️ Start</button>
+      <button id="pause">⏸️ Pause</button>
+      <button id="reset">🗑️ Reset</button>
+    </div>
+
+    <div id="timer-display">25:00</div>
+
+    <!-- Branding below timer -->
+    <div id="branding">
+      <a href="https://instagram.com/shadowindiestudio" target="_blank">
+        <img src="shadowindiestudio.png" id="logo" alt="Shadow Indie Studio Logo" />
+      </a>
+      <p>Made by <a href="https://instagram.com/shadowindiestudio" target="_blank">@shadowindiestudio</a></p>
+      <p>Dev: <a href="https://instagram.com/piro_shub" target="_blank">@piro_shub</a></p>
+    </div>
+    
+    <label for="sound-select">Alarm Sound:</label>
+    <select id="sound-select">
+      <option value="sound1.mp3">Classic Bell</option>
+      <option value="sound2.mp3">Digital Ping</option>
+      <option value="sound3.mp3">Victory Horn</option>
+    </select>
+
+    <div id="quote" class="hidden"></div>
+
+    <textarea id="customQuotes" placeholder="Add custom quotes here, one per line..."></textarea>
+    <button id="saveQuotes">Save Quotes</button>
+
+    <div class="stats">
+      <h3>Productivity Stats</h3>
+      <p id="pomodoros">Pomodoros Completed: 0</p>
+      <p id="shorts">Short Breaks Taken: 0</p>
+      <p id="longs">Long Breaks Taken: 0</p>
+    </div>
+
+    <!-- Removed the themeToggle button -->
+
+  </div>
+
+  <audio id="alarmSound" src="sound1.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
